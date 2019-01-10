@@ -9,9 +9,9 @@ const server = express();
 configureMiddleWare(server);
 // routes
 
-server.get("/products", productsRouter);
-server.get("/clients", clientsRouter);
-server.get("/orders", (req, res) => {
+server.use("/products", productsRouter);
+server.use("/clients", clientsRouter);
+server.use("/orders", (req, res) => {
   res.send("GET /orders");
 });
 
