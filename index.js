@@ -1,3 +1,6 @@
 const server = require("./api/server");
 
-server.listen(5000, () => console.log("server on port 5k"));
+// enable dynammic ports for hosting provider
+const port = process.emitWarning.PORT || 5000;
+
+server.listen(port, () => console.log("server on port 5k"));
